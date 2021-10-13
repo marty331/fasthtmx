@@ -1,9 +1,20 @@
 # Fast-HTMX
 
 ## Description
-Fast-HTMX is a demo project of FastAPI an HTMX.  The purpose of this project
+Fast-HTMX is a demo project of [FastAPI](https://fastapi.tiangolo.com) an [HTMX](https://htmx.org).  The purpose of this project
 is to illustrate how to create a website with no JavaScript, using only HTML, CSS, and
 Python.  HTMX is a plugin that allows this to be possible.
+
+## HTMX Attributes
+The following HTMX attributes are used in this project:
+
+- hx-get
+- hx-post
+- hx-trigger
+- hx-target
+- hx-push-url
+- hx-indicator
+- hx-swap
 
 ## Structure
 db - Database setup
