@@ -1,0 +1,4 @@
+fastapi>=0.70.0
+Jinja2>=3.0.2
+SQLAlchemy>=1.4.25
+uvicorn>=0.15.0
