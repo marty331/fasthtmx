@@ -1,0 +1,59 @@
+.container{
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav-item {
+    margin: 0 1em;
+}
+#navbarSupportedContent {
+    display: flex !important;
+    flex-basis: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 25px;
+    color: #aaa;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.form-container {
+    margin: 2em;
+}

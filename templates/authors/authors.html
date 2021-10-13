@@ -1,0 +1,26 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+<div class="container">
+    <div></div>
+    <div class="container-center">
+        <h2>Authors in My Library</h2>
+        {% for author in authors %}
+        <div>
+            <strong>Name:</strong> {{ author.first_name }} {{ author.last_name }} <strong>Email:</strong> {{ author.email }}
+        </div>
+        <p>
+            {% set author_id=author.id %}
+            {% include 'authors/partials/show_books.html' %}
+        </p>
+        {% endfor %}
+        <div>
+            <br>
+            {% include 'authors/partials/show_add_author_form.html'  %}
+            <br><br><br><br><br>
+        </div>
+    </div>
+    <div></div>
+</div>
+
+{% endblock %}

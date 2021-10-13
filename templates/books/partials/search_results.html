@@ -1,0 +1,18 @@
+<table class="table"  id="search-results">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author.first_name }} {{ book.author.last_name }}</td>
+        <td>{{ book.pages }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

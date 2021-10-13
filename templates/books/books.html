@@ -1,0 +1,28 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+<div class="container">
+    <div></div>
+    <div class="container-center">
+        <h3>
+          Search Books
+          <span class="htmx-indicator">
+            <img src="/static/img/bars.svg"/> Searching...
+           </span>
+        </h3>
+        <input class="form-control" type="text"
+               name="search_text" placeholder="Search by Title or Author's name..."
+               value="{{ search_text }}"
+               hx-get="/books/search"
+               hx-trigger="keyup changed delay:500ms"
+               hx-target="#search-results"
+               hx-push-url="true"
+               hx-indicator=".htmx-indicator">
+
+        {% include 'books/partials/search_results.html' %}
+
+    </div>
+    <div></div>
+</div>
+
+{% endblock %}

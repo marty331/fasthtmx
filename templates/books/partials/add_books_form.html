@@ -1,0 +1,26 @@
+<div id="swapable-content"></div>
+<form id="library-form" class="library-form fade-me-in fade-me-out" hx-swap="outerHTML" hx-target="#swapable-content" action="/books/add" method="POST">
+
+    <input type="text" class="form-control" name="title" placeholder="Book title" required/>
+    <input type="text" class="form-control" name="pages" placeholder="Number of pages" required/><br>
+    <label for="author_id">Choose an author:</label>
+
+    <select name="author_id" id="author_id-select">
+        <option value="">--Please choose an option--</option>
+        {% for author in data.authors %}
+        <option value={{ author.id}}> {{author.first_name }} {{ author.last_name}} </option>
+        {% endfor %}
+    </select>
+    <br>
+    <button  type="submit">Create</button>
+
+    <button
+            hx-get="/books/cancel_add"
+            hx-target="#library-form"
+    >Cancel</button>
+    <button
+            hx-get="/author/add"
+            hx-target="#library-form"
+    >Add Author</button>
+
+</form>

@@ -1,0 +1,16 @@
+<form class="author-form form-container"
+      hx-target="this"
+      hx-swap="outerHTML"
+      hx-post="/authors/add">
+
+    <input type="text" class="form-control" name="first_name" placeholder="First Name" required/>
+    <input type="text" class="form-control" name="last_name" placeholder="Last Name" required/><br>
+    <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+    <br>
+    <button  type="submit">Create</button>
+
+    <button
+            hx-get="/authors/cancel_add"
+            hx-target=".author-form"
+    >Cancel</button>
+</form>

@@ -1,0 +1,14 @@
+<div id="author-books-{{author_id}}">
+    <ol>
+    {% for book in books %}
+    <li class="no-list-style"><strong>Title:</strong> {{ book.title }} {{ book.pages}} pages.</li>
+    {% endfor %}
+</ol>
+<button
+        hx-get="/authors/close_books/{{author_id}}"
+        hx-target="#author-books-{{author_id}}"
+>
+    Close
+</button>
+</div>
+
