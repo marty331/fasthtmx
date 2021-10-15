@@ -50,8 +50,13 @@ def create_author(request: Request, email: str = Form(...), first_name: str = Fo
         raise HTTPException(status_code=400, detail="Email already registered")
     author = schema.AuthorCreate(last_name=last_name, first_name=first_name, email=email)
     dbs.create_author(db=db, author=author)
-    if request.headers.get('HX-Request'):
+    url = request.headers.get('HX-Current-URL').split('/')[-1]
+    if request.headers.get('HX-Request') and url == 'authors':
         return templates.TemplateResponse('authors/partials/show_add_author_form.html', {"request": request})
+    elif request.headers.get('HX-Request') and url == '':
+        return templates.TemplateResponse('books/partials/show_add_form.html', {"request": request})
+    else:
+        pass
     return RedirectResponse(url="/", status_code=302)
 
 
