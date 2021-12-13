@@ -1,7 +1,7 @@
 # Fast-HTMX
 
 ## Description
-Fast-HTMX is a demo project of [FastAPI](https://fastapi.tiangolo.com) an [HTMX](https://htmx.org).  The purpose of this project
+Fast-HTMX is a demo project of [FastAPI](https://fastapi.tiangolo.com) and [HTMX](https://htmx.org).  The purpose of this project
 is to illustrate how to create a website with no JavaScript, using only HTML, CSS, and
 Python.  HTMX is a plugin that allows this to be possible.
 
@@ -29,7 +29,7 @@ static - Static files
 
 templates - Contains files for each page and partials for all partial pages that are related to the main page of the directory which it is under.
 
-viewmodels - View models for gatering data for pages and partials.
+viewmodels - View models for gathering data for pages and partials.
 
 main.py - Main operational file for running FastAPI.
 
