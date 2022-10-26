@@ -27,7 +27,7 @@ nav{
     list-style: none;
 }
 .nav-item {
-    margin: 0 1em;
+    margin: 0 1em; /* better to use vh or vw instead of em */
 }
 #navbarSupportedContent {
     display: flex !important;
