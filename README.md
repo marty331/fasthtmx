@@ -38,3 +38,7 @@ main.py - Main operational file for running FastAPI.
 - Activate virtual environment
 - Install requirements `pip3 install -r requirements.txt`
 - Run project `python3 -m uvicorn main:app --reload`
+    ### Using Docker
+    - Build image `docker build -t fast-htmx .`
+    - Create Database `touch sql_app.db`
+    - Run container `docker run -v $(pwd)/sql_app.db:/code/sql_app.db -d --name fast-htmx -p 8000:8000 fast-htmx`
