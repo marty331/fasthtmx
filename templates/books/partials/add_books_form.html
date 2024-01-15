@@ -5,7 +5,7 @@
     <input type="text" class="form-control" name="pages" placeholder="Number of pages" required/><br>
     <label for="author_id">Choose an author:</label>
 
-    <select name="author_id" id="author_id-select">
+    <select name="author_id" id="author_id-select" required>
         <option value="">--Please choose an option--</option>
         {% for author in data.authors %}
         <option value={{ author.id}}> {{author.first_name }} {{ author.last_name}} </option>
